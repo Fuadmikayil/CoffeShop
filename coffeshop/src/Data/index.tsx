@@ -10,10 +10,6 @@ type Language = 'en' | 'az'; // Əlavə dillər varsa burada qeyd edə bilərsin
 export const navLinks: Record<Language, navLinksTip[]> = {
     en: [
         {
-            title: "Home",
-            path: "/"
-        },
-        {
             title: "Menu",
             path: "/menu",
             pathChild: [
