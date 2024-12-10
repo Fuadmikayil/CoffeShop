@@ -46,10 +46,6 @@ export const navLinks: Record<Language, navLinksTip[]> = {
     ],
     az: [
         {
-            title: "Home",
-            path: "/"
-        },
-        {
             title: "Menyu",
             path: "/menu",
             pathChild: [
