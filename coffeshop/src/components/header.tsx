@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { navLinks, navLinksTip } from '../Data';
 import { NavLink } from 'react-router-dom';
 import { RxTriangleDown } from 'react-icons/rx';
-import azImg from "../assets/az_flag_.webp";
+import azImg from "../assets/az_flag.webp";
 import enImg from "../assets/en_flag.webp";
 import { useState } from 'react';
 
@@ -27,11 +27,10 @@ const Header = () => {
         i18n.changeLanguage(lang);
         setSelectedLanguage(lang);
     };
-
     return (
         <>
-            <header className='w-full flex justify-center p-10 bg-transparent'>
-                <section className='container flex justify-between items-center'>
+            <header className='w-full flex justify-center p-10 bg-transparent absolute '>
+                <section className='container flex justify-between items-center '>
                     <img src={Logo} alt="" className='w-[400px]' />
                     <nav>
                         <ul className='flex gap-10'>
@@ -58,7 +57,6 @@ const Header = () => {
                             ))}
                         </ul>
                     </nav>
-                    {/* Custom Language Selector */}
                     <div className="relative">
                         <div className="flex items-center gap-2 cursor-pointer border border-gray-300 rounded p-2 bg-transparent"
                             onClick={(e) => e.currentTarget.nextElementSibling?.classList.toggle('hidden')}>
@@ -74,7 +72,6 @@ const Header = () => {
                                     onClick={() => changeLanguage(lang.language)}>
                                     <img src={lang.img} alt={lang.name} className="w-7 h-5" />
                                     <span className=' capitalize'>{lang.language}</span>
-
                                 </div>
                             ))}
                         </div>

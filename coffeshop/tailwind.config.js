@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Nunito Sans", "sans-serif"],
+        serif:[ "Playfair Display", "serif"],
       },
       colors: {
         customGreen: "rgb(167, 193, 121)",
@@ -13,6 +14,9 @@ export default {
       container: {
         padding: "0 10rem",
       },
+      backgroundImage:{
+        "hero-Backgroundİmage":"url(./src/assets/heroBg.webp)"
+      }
     },
   },
   plugins: [],
