@@ -6,10 +6,14 @@ export default {
       fontFamily: {
         sans: ["Nunito Sans", "sans-serif"],
         serif:[ "Playfair Display", "serif"],
+        company:["Festivo LC Basic" , "serif-serif"],
+        
       },
       colors: {
         customGreen: "rgb(167, 193, 121)",
         customWhite: "rgb(232, 230, 227)",
+        bgGreen:"#0E3528",
+        opacityBlack1:"rgb(0, 0, 0, 0.71)"
       },
       container: {
         padding: "0 10rem",

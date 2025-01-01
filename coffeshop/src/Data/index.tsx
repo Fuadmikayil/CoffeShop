@@ -1,11 +1,18 @@
 export interface navLinksTip {
     title: string;
     path: string;
-    pathChild?: navLinksTip[]; // Əgər alt menyular varsa, eyni interfeys istifadə ediləcək
+    pathChild?: {
+        title: string;
+        path: string;
+        img: any;
+    }[];
 }
 
+import Hotİmg from "../assets/hots.jpg";
+import Sweetsİmg from "../assets/sweets.jpg";
 
-type Language = 'en' | 'az'; // Əlavə dillər varsa burada qeyd edə bilərsiniz
+
+type Language = 'en' | 'az'; 
 
 export const navLinks: Record<Language, navLinksTip[]> = {
     en: [
@@ -15,33 +22,35 @@ export const navLinks: Record<Language, navLinksTip[]> = {
             pathChild: [
                 {
                     title: "Hot & Cold Drinks ",
-                    path: "/hot-cold-drinks"
+                    path: "/hot-cold-drinks",
+                    img: Hotİmg
                 },
                 {
                     title: "Sweets & Snacks ",
-                    path: "/sweets-snacks"
+                    path: "/sweets-snacks",
+                    img: Sweetsİmg
                 }
-            ]
+            ],
         },
         {
             title: "Location Finder",
-            path: "/location-finder"
+            path: "/location-finder",
         },
         {
             title: "About Us",
-            path: "/about-us"
+            path: "/about-us",
         },
         {
             title: "Stories",
-            path: "/stories"
+            path: "/stories",
         },
         {
             title: "Franchising",
-            path: "/franchising"
+            path: "/franchising",
         },
         {
             title: "Jobs",
-            path: "/jobs"
+            path: "/jobs",
         }
     ],
     az: [
@@ -51,33 +60,35 @@ export const navLinks: Record<Language, navLinksTip[]> = {
             pathChild: [
                 {
                     title: "İsti və Soyuq İçkilər ",
-                    path: "/hot-cold-drinks"
+                    path: "/hot-cold-drinks",
+                    img: Hotİmg
                 },
                 {
                     title: "Şirniyyat və Qəlyanaltılar ",
-                    path: "/sweets-snacks"
+                    path: "/sweets-snacks",
+                    img: Sweetsİmg
                 }
             ]
         },
         {
             title: "Məkan Axtarışı",
-            path: "/location-finder"
+            path: "/location-finder",
         },
         {
             title: "Haqqımızda",
-            path: "/about-us"
+            path: "/about-us",
         },
         {
             title: "Hekayələr",
-            path: "/stories"
+            path: "/stories",
         },
         {
             title: "Françayzinq",
-            path: "/franchising"
+            path: "/franchising",
         },
         {
             title: "İşlər",
-            path: "/jobs"
+            path: "/jobs",
         }
     ]
 };
