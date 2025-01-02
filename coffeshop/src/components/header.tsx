@@ -1,4 +1,4 @@
-import Logo from '../assets/logo.svg';
+import LogoHeader from '../assets/logoHeader.svg';
 import { useTranslation } from 'react-i18next';
 import { navLinks, navLinksTip } from '../Data';
 import { NavLink } from 'react-router-dom';
@@ -29,9 +29,9 @@ const Header = () => {
     };
     return (
         <>
-            <header className='w-full flex justify-center p-10 bg-transparent absolute z-10 '>
+            <header className='w-full flex justify-center p-10 bg-transparent absolute z-20 '>
                 <section className='container flex justify-between items-center '>
-                    <img src={Logo} alt="" className='w-[400px]' />
+                    <img src={LogoHeader} alt="" className='w-[400px]' />
                     <nav>
                         <ul className='flex gap-10'>
                             {navLinks[i18n.language as 'en' | 'az'].map((item: navLinksTip, index: number) => (
