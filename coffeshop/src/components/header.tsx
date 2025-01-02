@@ -29,7 +29,7 @@ const Header = () => {
     };
     return (
         <>
-            <header className='w-full flex justify-center p-10 bg-transparent absolute '>
+            <header className='w-full flex justify-center p-10 bg-transparent absolute z-10 '>
                 <section className='container flex justify-between items-center '>
                     <img src={Logo} alt="" className='w-[400px]' />
                     <nav>
@@ -38,7 +38,7 @@ const Header = () => {
                                 <li className='relative group' key={index}>
                                     <NavLink to={item.path} className='flex items-center cursor-pointer text-customWhite font-sans text-lg tracking-wider duration-300 group-hover:text-customGreen transition-all hover:text-customGreen'>
                                         {item.title}
-                                        {item.pathChild ? (
+                                        {item.path== "/menu" ? item.pathChild ? (
                                             <>
                                                 <RxTriangleDown className='scale-125 cursor-pointer group-hover:text-customGreen' />
                                                 <ul className='absolute top-full pt-3 hidden group-hover:block'>
@@ -51,7 +51,7 @@ const Header = () => {
                                                     ))}
                                                 </ul>
                                             </>
-                                        ) : null}
+                                        ) : null : null}
                                     </NavLink>
                                 </li>
                             ))}

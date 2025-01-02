@@ -10,6 +10,9 @@ export interface navLinksTip {
 
 import Hotİmg from "../assets/hots.jpg";
 import Sweetsİmg from "../assets/sweets.jpg";
+import abouteUs1İmg from "../assets/abouteUs1.jpg";
+import abouteUs2İmg from "../assets/abouteUs2.jpg";
+import abouteUs3İmg from "../assets/abouteUs3.jpg";
 
 
 type Language = 'en' | 'az'; 
@@ -39,6 +42,23 @@ export const navLinks: Record<Language, navLinksTip[]> = {
         {
             title: "About Us",
             path: "/about-us",
+            pathChild: [
+                {
+                    title: "Our İdeas ",
+                    path: "/our-ideas",
+                    img: abouteUs1İmg
+                },
+                {
+                    title: "Our Worldwide Network ",
+                    path: "/our-worldwide-network",
+                    img: abouteUs2İmg
+                },
+                {
+                    title: "Franchising ",
+                    path: "/franchising",
+                    img: abouteUs3İmg
+                }
+            ],
         },
         {
             title: "Stories",
